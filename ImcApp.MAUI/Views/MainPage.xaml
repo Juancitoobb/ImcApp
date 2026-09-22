@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ImcApp.MAUI.Views.MainPage"
+             Title="Índice de Masa Corporal">
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="16"
+            Spacing="24">
+            <Border 
+                Stroke="LightGray" 
+                StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/> 
+                </Border.StrokeShape>
+                <VerticalStackLayout 
+                    Padding="16" 
+                    Spacing="4">
+                    <Label 
+                        Text="Proporcione El Peso En Kilogramos:"/>
+                    <Entry 
+                        BackgroundColor="WhiteSmoke"
+                        Keyboard="Numeric"
+                        ClearButtonVisibility="WhileEditing"
+                        x:Name="PesoLabel"/>
+                    <Label 
+                        Text="Proporcione La Estatura En Metros: "/>
+                    <Entry
+                        BackgroundColor="WhiteSmoke"
+                        Keyboard="Numeric"
+                        ClearButtonVisibility="WhileEditing"
+                        x:Name="EstaturaLabel"/>
+                </VerticalStackLayout>
+            </Border>
+            <HorizontalStackLayout 
+                HorizontalOptions="Center" 
+                Spacing="24">
+                <Button 
+                    Text="Calcular"
+                    MinimumWidthRequest="80"
+                    Clicked="OnCalcularButtonClicked"/>
+                <Button 
+                    Text="Limpiar"
+                    MinimumWidthRequest="80"
+                    Clicked="OnLimpiarButtonClicked"/>
+            </HorizontalStackLayout>
+
+            <Border
+                Stroke="LightGray"
+                StrokeThickness="2">
+                <Border.StrokeShape>
+                    <RoundRectangle
+                        CornerRadius="10"/>
+                </Border.StrokeShape>
+                <VerticalStackLayout
+                    Padding="16"
+                    Spacing="4">
+                    <Label 
+                        Text="El Índice De La Masa Corporal Es:"/>
+                    <Label 
+                        Text="23.4567"
+                        HorizontalOptions="Center"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        x:Name="ImcLabel"/>
+                    <Label 
+                        Text="La Situacion Nutricional Es:"/>
+                    <Label 
+                        Text="Peso Normal"
+                        HorizontalOptions="Center"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        x:Name="SituacionNutricionalLabel"/>
+                </VerticalStackLayout>
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>
