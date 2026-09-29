@@ -13,24 +13,37 @@
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="10"/> 
                 </Border.StrokeShape>
-                <VerticalStackLayout 
-                    Padding="16" 
-                    Spacing="4">
-                    <Label 
+                <Grid
+                    RowDefinitions="*,*"
+                    ColumnDefinitions="Auto,*"
+                    RowSpacing="8"
+                    ColumnSpacing="4"
+                    Padding="16">
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        VerticalOptions ="Center"
                         Text="Proporcione El Peso En Kilogramos:"/>
                     <Entry 
+                        Grid.Row ="0"
+                        Grid.Column ="1"
                         BackgroundColor="WhiteSmoke"
                         Keyboard="Numeric"
                         ClearButtonVisibility="WhileEditing"
                         x:Name="PesoLabel"/>
                     <Label 
+                        VerticalOptions="Center"
+                        Grid.Row="1"
+                        Grid.Column="0"
                         Text="Proporcione La Estatura En Metros: "/>
                     <Entry
+                        Grid.Row="1"
+                        Grid.Column="1"
                         BackgroundColor="WhiteSmoke"
                         Keyboard="Numeric"
                         ClearButtonVisibility="WhileEditing"
                         x:Name="EstaturaLabel"/>
-                </VerticalStackLayout>
+                <Grid/>
             </Border>
             <HorizontalStackLayout 
                 HorizontalOptions="Center" 
