@@ -11,7 +11,7 @@
                 Stroke="LightGray" 
                 StrokeThickness="2">
                 <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="10"/> 
+                    <RoundRectangle CornerRadius="10"/>
                 </Border.StrokeShape>
                 <Grid
                     RowDefinitions="*,*"
@@ -27,10 +27,11 @@
                     <Entry 
                         Grid.Row ="0"
                         Grid.Column ="1"
+                        Text="{Binding Path=Peso}"
                         BackgroundColor="WhiteSmoke"
                         Keyboard="Numeric"
                         ClearButtonVisibility="WhileEditing"
-                        x:Name="PesoLabel"/>
+                        />
                     <Label 
                         VerticalOptions="Center"
                         Grid.Row="1"
@@ -39,11 +40,12 @@
                     <Entry
                         Grid.Row="1"
                         Grid.Column="1"
+                        Text="{Binding Path=Estatura}"
                         BackgroundColor="WhiteSmoke"
                         Keyboard="Numeric"
                         ClearButtonVisibility="WhileEditing"
-                        x:Name="EstaturaLabel"/>
-                <Grid/>
+                        />
+                    <Grid/>
             </Border>
             <HorizontalStackLayout 
                 HorizontalOptions="Center" 
@@ -51,14 +53,14 @@
                 <Button 
                     Text="Calcular"
                     MinimumWidthRequest="80"
-                    Clicked="OnCalcularButtonClicked"/>
+                    Command="{Binding CalcularCommand}"/>
                 <Button 
                     Text="Limpiar"
                     MinimumWidthRequest="80"
-                    Clicked="OnLimpiarButtonClicked"/>
+                    Command="{Binding LimpiarCommand}"/>
             </HorizontalStackLayout>
-
-            <Border
+            
+                <Border
                 Stroke="LightGray"
                 StrokeThickness="2">
                 <Border.StrokeShape>
@@ -71,7 +73,7 @@
                     <Label 
                         Text="El Índice De La Masa Corporal Es:"/>
                     <Label 
-                        Text="23.4567"
+                        Text="{Binding Path=Imc}"
                         HorizontalOptions="Center"
                         FontSize="Medium"
                         FontAttributes="Bold"
@@ -79,7 +81,7 @@
                     <Label 
                         Text="La Situacion Nutricional Es:"/>
                     <Label 
-                        Text="Peso Normal"
+                        Text="{Binding Path=SituacionNutricional}"
                         HorizontalOptions="Center"
                         FontSize="Medium"
                         FontAttributes="Bold"
